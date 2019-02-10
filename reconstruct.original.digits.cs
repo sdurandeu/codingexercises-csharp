@@ -9,7 +9,7 @@ public class Solution {
         ['4'] = new Dictionary<char, int>() { ['f'] = 1 , ['o'] = 1, ['u'] = 1, ['r'] = 1 },
         ['5'] = new Dictionary<char, int>() { ['f'] = 1 , ['i'] = 1, ['v'] = 1, ['e'] = 1 },
         ['6'] = new Dictionary<char, int>() { ['s'] = 1 , ['i'] = 1, ['x'] = 1,           },
-        ['7'] = new Dictionary<char, int>() { ['s'] = 1 , ['e'] = 2, ['v'] = 1, ['v'] = 1 },
+        ['7'] = new Dictionary<char, int>() { ['s'] = 1 , ['e'] = 2, ['v'] = 1, ['n'] = 1 },
         ['8'] = new Dictionary<char, int>() { ['e'] = 1 , ['i'] = 1, ['g'] = 1, ['h'] = 1, ['t'] = 1 },
         ['9'] = new Dictionary<char, int>() { ['n'] = 2 , ['i'] = 1, ['e'] = 1            },
     };
