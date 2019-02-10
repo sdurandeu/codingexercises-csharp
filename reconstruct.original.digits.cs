@@ -19,27 +19,31 @@ public class Solution {
         var result = "";
         
         var dictionary = new Dictionary<char, int>();
-        for(char c = 'a'; c <= 'z'; c++) {
+        for (char c = 'a'; c <= 'z'; c++) {
             dictionary.Add(c, s.Count(i => i == c));
         }
         
-        foreach (var number in lettersHash) {
+        do {
             
-            var hasAllOcurrences = true;
-            var lettersDictionary = number.Value;
-            foreach (var letter in lettersDictionary) {
-                if (dictionary[letter.Key] < letter.Value) {
-                    hasAllOcurrences = false;
+            foreach (var number in lettersHash) {
+
+                var hasAllOcurrences = true;
+                var lettersDictionary = number.Value;
+                foreach (var letter in lettersDictionary) {
+                    if (dictionary[letter.Key] < letter.Value) {
+                        hasAllOcurrences = false;
+                    }
                 }
+
+                if (hasAllOcurrences) {
+                    result += number.Key;
+                    foreach (var letter in lettersDictionary) {
+                        dictionary[letter.Key] -= letter.Value;
+                    }
+                }                
             }
             
-            if (hasAllOcurrences) {
-                result += number.Key;
-                foreach (var letter in lettersDictionary) {
-                    dictionary[letter.Key] -= letter.Value;
-                }
-            }                
-        }
+        } while(dictionary.Values.Count(i => i > 0) == 0 );
         
         return String.Concat(result.OrderBy(c => c));
     }
