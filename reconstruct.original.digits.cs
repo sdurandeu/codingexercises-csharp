@@ -43,7 +43,7 @@ public class Solution {
                 }                
             }
             
-        } while(dictionary.Values.Count(i => i > 0) == 0 );
+        } while(dictionary.Values.Count(i => i > 0) > 0 );
         
         return String.Concat(result.OrderBy(c => c));
     }
